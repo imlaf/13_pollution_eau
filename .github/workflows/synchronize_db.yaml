@@ -3,7 +3,12 @@ name: 🔄 Synchronize Production DB to storage
 on:
   push:
     branches:
+      - test # to remove
       - main
+      - feat/store-data-s3-scaleway-ci
+    paths:
+      - pipelines/**
+      - database/**
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
